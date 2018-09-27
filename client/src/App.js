@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Redirect, Switch} from 'react-router-dom';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,6 +10,7 @@ import Aux from './hoc/Aux';
 import Header from './components/Header';
 import Dashboard from './containers/Dashboard';
 import Catalogue from './containers/Catalogue';
+import CourseDetails from './containers/CourseDetails';
 
 import {fetchUser} from './actions/authActions';
 
@@ -31,10 +32,14 @@ class App extends Component {
                 <Aux>
                     <Header/>
                     <Aux>
-                        <div className="position-absolute main-view">
-                            <Route path={"/"} exact component={Landing}/>
-                            <Route path={"/dashboard"} exact component={Dashboard}/>
-                            <Route path={"/courses"} exact component={Catalogue}/>
+                        <div className="position-absolute main-view w-100">
+                            <Switch>
+                                <Route path={"/"} exact component={Landing}/>
+                                <Route path={"/dashboard"} exact component={Dashboard}/>
+                                {/*<Route path={"/courses"} exact component={Catalogue}/>*/}
+                                <Route path={"/courses"} exact component={Catalogue}/>
+                                <Route path={"/course/:title"} exact component={CourseDetails}/>
+                            </Switch>
                         </div>
                     </Aux>
                 </Aux>

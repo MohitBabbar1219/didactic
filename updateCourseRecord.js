@@ -25,28 +25,31 @@ const newArray = final_array.map((course, index) => {
 newArray.sort();
 let removeDuplicates = {};
 newArray.map(el =>{
-    removeDuplicates[el.title] = el
+    removeDuplicates[el.category] = el
     // console.log(el)
 });
 
 console.log(Object.keys(removeDuplicates).length);
 
 // newArray.map(x => console.log(x));
-
+let newSortedArray = [];
+console.log(Object.keys(removeDuplicates));
 // for (course in removeDuplicates) {
 //             // console.log(course);
-//             console.log(removeDuplicates[course]);
-//         }
+//     console.log(course);
+// }
 
-const putRecords = () => {
-    for (course in removeDuplicates) {
-        // console.log(course);
-        new Course({
-            ...removeDuplicates[course]
-        }).save().then(crs => console.log(crs)).catch(err => console.log(err));
-    }
-};
-putRecords();
+
+
+// const putRecords = () => {
+//     for (course in removeDuplicates) {
+//         // console.log(course);
+//         new Course({
+//             ...removeDuplicates[course]
+//         }).save().then(crs => console.log(crs)).catch(err => console.log(err));
+//     }
+// };
+// putRecords();
 // //
 // Course.find({title: 'The Complete Node.js Developer Course (2nd Edition)'}).then(courses => {
 //     console.log(courses.length);

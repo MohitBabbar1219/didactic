@@ -18,6 +18,25 @@
     width: 33%;
 }
 
+.category-tab {
+    /*height: calc((100vh - 70px) / 22);*/
+    cursor: pointer;
+    background: transparent;
+    text-align: center;
+    color: #e7e7e7;
+    border: 1px solid transparent;
+}
+
+
+
+.category-tab:hover,
+.category-tab:active {
+    transition-duration: 0.3s;
+    color: #373b43;
+    background-color: #d3d3d3;
+    border: 1px solid #373b43;
+}
+
 .catalogue-main-view {
     margin-left: 25%;
     background-color: #4a4f57;
