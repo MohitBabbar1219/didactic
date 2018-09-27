@@ -1,0 +1,25 @@
+.side-bar {
+    height: calc(100vh - 70px);
+    margin-top: 70px;
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: #111; /* Black */
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 20px;
+}
+
+.catalogue-category-view {
+    background-color: #5a6068;
+}
+
+.next-butt-courses {
+    width: 33%;
+}
+
+.catalogue-main-view {
+    margin-left: 25%;
+    background-color: #4a4f57;
+    min-height: calc(100vh - 70px);
+}

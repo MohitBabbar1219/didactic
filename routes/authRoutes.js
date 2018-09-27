@@ -11,7 +11,7 @@ router.get('/google',
 
 // route for google callback verification
 router.get('/google/callback', passport.authenticate('google'), (req, res) => {
-    res.status(200).json({authSuccessful: true});
+    res.redirect('/dashboard');
 });
 
 router.get('/current_user', (req, res) => {
